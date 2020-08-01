@@ -11,7 +11,7 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - ./pg-data:/var/lib/postgresql/data
-      - ./data/schema.sql:docker-entrypoint-initdb.d/schema.sql
+      - ./data/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     restart: always
   app:
     image: vladsmirn289/authentication_service
