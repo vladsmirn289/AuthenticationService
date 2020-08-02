@@ -24,7 +24,7 @@ public class JwtUtils {
     private String secret;
 
     @Value("${jwt.sessionTime}")
-    private long sessionTimeInMillis;
+    private long sessionTimeInSeconds;
 
     public String createToken(String username, Set<Role> roles) {
         logger.info("Creating token");
@@ -41,7 +41,7 @@ public class JwtUtils {
         Date validTime = Date
                 .from(LocalDateTime
                         .now()
-                        .plusSeconds(sessionTimeInMillis)
+                        .plusSeconds(sessionTimeInSeconds)
                         .atZone(ZoneId.systemDefault())
                         .toInstant());
 
