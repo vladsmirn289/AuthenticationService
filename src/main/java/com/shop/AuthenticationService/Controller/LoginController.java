@@ -5,6 +5,7 @@ import com.shop.AuthenticationService.DTO.AuthRequest;
 import com.shop.AuthenticationService.DTO.AuthResponse;
 import com.shop.AuthenticationService.Model.Client;
 import com.shop.AuthenticationService.Service.ClientService;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,7 @@ public class LoginController {
         this.clientService = clientService;
     }
 
+    @ApiOperation(value = "Get JWT token by credentials")
     @PostMapping
     public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest authRequest) {
         logger.info("Login method called");
