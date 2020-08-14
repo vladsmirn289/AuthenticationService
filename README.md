@@ -40,11 +40,10 @@ The diagram of the package structure:
                     *   [Model] (JPA entities)
                     *   [Repository] (Spring Data repos)
                     *   [Service] (Service for finding client by a login)
-                    *   [GoodsShopApplication.java] (Main class for, Spring Boot)
+                    *   [AuthenticationServiceApp.java] (Main class for, Spring Boot)
             *   [resources]
                 *   [application.properties] (Stores various properties of the database, JWT and swagger)
                 *   [log4j2.xml] (Stores log4j2 properties)
-        *   [test]
 
 ## License
 Authentication service is the service released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
@@ -62,10 +61,8 @@ Authentication service is the service released under version 2.0 of the [Apache 
 [Model]: ./src/main/java/com/shop/AuthenticationService/Model
 [Repository]: ./src/main/java/com/shop/AuthenticationService/Repository
 [Service]: ./src/main/java/com/shop/AuthenticationService/Service
-[GoodsShopApplication.java]: ./src/main/java/com/shop/AuthenticationService/AuthenticationServiceApp.java
+[AuthenticationServiceApp.java]: ./src/main/java/com/shop/AuthenticationService/AuthenticationServiceApp.java
 
 [resources]: ./src/main/resources
 [application.properties]: ./src/main/resources/application.properties
 [log4j2.xml]: ./src/main/resources/log4j2.xml
-
-[test]: ./src/test
